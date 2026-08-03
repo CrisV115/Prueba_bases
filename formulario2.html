@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 2 - Transferencias</title>
+  <!-- Iconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page-container">
+    <section class="card card-wide">
+      <button class="close-btn" aria-label="Cerrar">&times;</button>
+
+      <!-- Encabezado -->
+      <div class="card-header">
+        <h2>Transferencias</h2>
+        <p class="subtitle">Nombre usuario y perfil</p>
+      </div>
+
+      <!-- Cuerpo del Formulario -->
+      <div class="card-body">
+        <form id="transfer-form">
+
+          <!-- Fila: Producto -->
+          <div class="form-row">
+            <div class="input-group">
+              <i class="fa-solid fa-box input-icon"></i>
+              <input type="text" id="transfer-producto" placeholder="Producto">
+            </div>
+          </div>
+
+          <!-- Fila 1: Sucursal Origen & Stock -->
+          <div class="form-row">
+            <div class="input-group">
+              <i class="fa-solid fa-building input-icon"></i>
+              <input type="text" id="transfer-origen" placeholder="Sucursal Origen" readonly>
+              <input type="hidden" id="transfer-origen-id">
+            </div>
+            <div class="input-group input-group-short">
+              <i class="fa-solid fa-cubes input-icon"></i>
+              <input type="text" id="stock-origen" placeholder="Stock" readonly>
+            </div>
+          </div>
+
+          <!-- Fila 2: Transferencia No. & Cantidad -->
+          <div class="form-row">
+            <div class="input-group">
+              <i class="fa-solid fa-hashtag input-icon"></i>
+              <input type="text" id="transfer-id" placeholder="Transferencia No.">
+            </div>
+            <div class="input-group input-group-short">
+              <i class="fa-solid fa-arrow-up-9-1 input-icon"></i>
+              <input type="number" id="transfer-cantidad" placeholder="Cantidad">
+            </div>
+          </div>
+
+          <!-- Fila 3: Sucursal Destino & Stock -->
+          <div class="form-row">
+            <div class="input-group">
+              <i class="fa-solid fa-location-dot input-icon"></i>
+              <select id="transfer-destino" class="select-styled">
+                <option value="" disabled selected hidden>Sucursal Destino</option>
+                <option value="sucursal-1">Sucursal 1</option>
+                <option value="sucursal-2">Sucursal 2</option>
+              </select>
+            </div>
+            <div class="input-group input-group-short">
+              <i class="fa-solid fa-cubes input-icon"></i>
+              <input type="text" id="stock-destino" placeholder="Stock" readonly>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="form-actions btn-group">
+            <button type="submit" class="btn btn-primary">GUARDAR</button>
+            <button type="button" class="btn btn-secondary">CANCELAR</button>
+          </div>
+
+          <div id="transfer-status" style="margin-top: 12px; min-height: 1.2em;"></div>
+ 
+        </form>
+      </div>
+    </section>
+  </main>
+ 
+<script src="form-handler.js"></script>
+</body>
+</html>

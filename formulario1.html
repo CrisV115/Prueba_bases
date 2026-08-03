@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 1 - Soy Natural</title>
+  <!-- Iconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page-container">
+    <section class="card">
+      <button class="close-btn" aria-label="Cerrar">&times;</button>
+      
+      <!-- Encabezado -->
+      <div class="card-header">
+        <h2>SOY NATURAL</h2>
+      </div>
+
+      <!-- Cuerpo del Formulario -->
+      <div class="card-body">
+        <form id="login-form">
+          
+          <div class="input-group">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="login-usuario" placeholder="Usuario" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="login-clave" placeholder="Clave" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-store input-icon"></i>
+            <input type="text" id="login-sucursal" placeholder="Sucursal" required>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="remember-me">
+              Recordarme
+            </label>
+          </div>
+
+          <!-- Botón de acción -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">INGRESAR</button>
+          </div>
+
+          <div id="login-status" style="margin-top: 12px; min-height: 1.2em;"></div>
+          
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <script src="form-handler.js"></script>
+</body>
+</html>

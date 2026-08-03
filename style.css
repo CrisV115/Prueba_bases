@@ -1,0 +1,353 @@
+/* ==========================================
+   ESTILOS GENERALES Y REINICIO
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+}
+
+/* Título Superior */
+.forms-header-titles {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ==========================================
+   CONTENEDOR Y TARJETA
+   ========================================== */
+.card {
+  background-color: #cccccc; /* Fondo gris claro de la maqueta */
+  border: 1px solid #999999;
+  width: 100%;
+  max-width: 620px; /* Ancho adecuado para que todo quepa sin apretarse */
+  margin: 0 auto;
+}
+
+/* Barra superior negra */
+.card-title-bar {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Cuerpo con distanciamiento entre filas */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ==========================================
+   FILAS Y GRUPOS DE CAMPOS
+   ========================================== */
+.form-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* CLAVE: Permite que flexbox reduzca el input sin desbordar */
+}
+
+/* Etiquetas grises a la izquierda */
+label {
+  background-color: #a6a6a6;
+  color: #000000;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 110px; /* Ancho uniforme para etiquetas del lado izquierdo */
+  min-height: 38px;
+}
+
+/* Ancho especial más corto para etiquetas secundarias (Stock / Cantidad) */
+.input-group-short label {
+  width: 75px;
+}
+
+/* ==========================================
+   INPUTS Y SELECTS
+   ========================================== */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+  flex: 1;
+  width: 100%;
+  min-width: 0; /* Evita que el navegador fuerce el tamaño por defecto */
+  height: 38px;
+  padding: 0 10px;
+  background-color: #ffffff;
+  border: 2px solid #70ad47; /* Borde verde característico */
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* Selector azul específico (Sucursal Destino) */
+.select-blue {
+  background-color: #5b9bd5;
+  color: #ffffff;
+  border: 1px solid #41719c;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* ==========================================
+   ESTILOS GENERALES Y CONFIGURACIÓN BASE
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #6a434c; /* Fondo marrón/mosaico de la imagen */
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================
+   TARJETA / CONTENEDOR (CARD)
+   ========================================== */
+.card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 35px 35px 35px;
+  position: relative;
+}
+
+/* Ancho ampliado para formularios con campos dobles */
+.card.card-wide {
+  max-width: 620px;
+}
+
+/* Botón de cerrar (X) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Encabezado */
+.card-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.card-header h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  letter-spacing: 0.5px;
+}
+
+.card-header .subtitle {
+  font-size: 0.85rem;
+  color: #777777;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   FORMULARIO Y CAMPOS CON ICONOS Y LÍNEA
+   ========================================== */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  .form-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 8px;
+  transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+  border-bottom-color: #209988;
+}
+
+.input-group-short {
+  flex: 0.5;
+}
+
+.input-icon {
+  color: #333333;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Inputs y Selects */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #333333;
+  font-family: inherit;
+}
+
+input::placeholder,
+select {
+  color: #999999;
+}
+
+input[readonly] {
+  color: #888888;
+}
+
+select.select-styled {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Checkbox (Remember Me) */
+.form-options {
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #777777;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #209988;
+  cursor: pointer;
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN
+   ========================================== */
+.form-actions {
+  margin-top: 10px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn-primary {
+  background-color: #209988; /* Verde azulado / Teal del ejemplo */
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1a8274;
+}
+
+.btn-secondary {
+  background-color: #888888;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #777777;
+}
