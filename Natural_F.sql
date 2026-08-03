@@ -191,7 +191,23 @@ INSERT INTO empleado (id_empleado, cedula, nombres, apellidos, telefono, correo,
 (20,'0102030020','Esteban','Guerrero','0980000020','esteban.guerrero@soynatural.com','2025-08-20',20,20);
 
 
--- 8. CATEGORIA_PRODUCTO
+-- 8. USUARIO
+-- Cada empleado puede ingresar con su nombre o con su ID de empleado.
+DROP TABLE IF EXISTS usuario CASCADE;
+CREATE TABLE usuario (
+  id_usuario INT PRIMARY KEY REFERENCES empleado(id_empleado),
+  clave VARCHAR(255) NOT NULL,
+  fecha_alta DATE NOT NULL DEFAULT CURRENT_DATE,
+  perfil VARCHAR(50) NOT NULL
+);
+
+INSERT INTO usuario (id_usuario, clave, fecha_alta, perfil)
+SELECT e.id_empleado, '1234', CURRENT_DATE, te.descripcion
+FROM empleado e
+JOIN tipo_empleado te ON te.id_tipo_empleado = e.id_tipo_empleado;
+
+
+-- 9. CATEGORIA_PRODUCTO
 DROP TABLE IF EXISTS categoria_producto CASCADE;
 CREATE TABLE categoria_producto (
   id_categoria SERIAL PRIMARY KEY,
